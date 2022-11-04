@@ -1,11 +1,11 @@
-package com.eurotech.test.day04;
+package com.eurotech.test.day04_Links;
 
 import com.eurotech.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Links {
+public class Link {
 
 
     public static void main(String[] args) {
