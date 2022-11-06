@@ -1,4 +1,4 @@
-package com.eurotech.test.day06_DateDownload_Upload.day07_Browser_Windows;
+package com.eurotech.test.day07_Browser_Windows;
 
 import com.eurotech.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
