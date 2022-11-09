@@ -32,6 +32,5 @@ public class Windows_Tab1 {
         WebElement sampleText= driver.findElement(By.id("sampleHeading"));
         System.out.println("sampleText.getText() = " + sampleText.getText());
 
-        driver.close();
     }
 }
