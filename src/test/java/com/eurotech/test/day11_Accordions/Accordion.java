@@ -26,7 +26,7 @@ public class Accordion {
     @AfterMethod
     public void tearDown(){
 
-       // driver.close();
+        driver.close();
     }
 
     @Test
@@ -46,7 +46,9 @@ public class Accordion {
 
         driver.findElement(By.cssSelector("#section3Heading")).click();
 
-        WebElement accordTest3=driver.findElement(By.xpath("//div[@id='section3Content']/p"));
+        WebElement accordTest3=driver.findElement(By.xpath("//div/p[contains(text(),'It is a long')]"));
         System.out.println("accordTest3.getText() = " + accordTest3.getText());
+
+
     }
 }
