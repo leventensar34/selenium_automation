@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AmazonAramaTest extends TestBase {
@@ -31,6 +32,20 @@ public class AmazonAramaTest extends TestBase {
             System.out.println("fiyat.getText() = " + fiyat.getText());
 
         }
+
+    }
+
+    @Test
+    public void allTabTest() {
+
+        driver.get(ConfigurationReader.get("url"));
+
+        page.changeAddressBtn.click();
+        page.navigateAllMenu("Amazon Music","Podcasts");
+
+        WebElement actualMessage=driver.findElement(By.xpath("(//div/span[@class='macro'])[1]"));
+
+        Assert.assertEquals(actualMessage.getText(),"Want access to top ad-free podcasts and 100 million songs? Try Amazon Music Unlimited");
 
     }
 }
