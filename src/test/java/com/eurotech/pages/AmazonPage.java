@@ -2,6 +2,7 @@ package com.eurotech.pages;
 
 import com.eurotech.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,10 +34,20 @@ public class AmazonPage {
     public WebElement changeAddressBtn;
 
 
-    public void navigateAllMenu(String tab, String module){
+
+    public void navigateAllMenu2(String tab, String module){
         Driver.get().findElement(By.xpath("(//*[.='All'])[2]")).click();
         Driver.get().findElement(By.xpath("(//div[text()='"+tab+"'])")).click();
         Driver.get().findElement(By.xpath("(//a[text()='"+module+"'])")).click();
+
+    }
+
+    public void navigateMenu1(String tab, String module){
+        Driver.get().findElement(By.id("searchDropdownBox")).click();
+        Driver.get().findElement(By.xpath("//div/select/option[text()='"+tab+"']"));
+        Driver.get().findElement(By.id("twotabsearchtextbox")).sendKeys(module + Keys.ENTER);
+
+
 
     }
 

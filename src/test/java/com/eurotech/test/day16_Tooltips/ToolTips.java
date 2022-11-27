@@ -44,7 +44,12 @@ public class ToolTips {
         actions.moveToElement(toolTipButton).perform();
 
         WebDriverWait wait=new WebDriverWait(driver,15);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("tooltip-inner")));
+
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("tooltip-inner")));
+        }catch (Exception e){
+
+        }
 
         WebElement toolTip=driver.findElement(By.className("tooltip-inner"));
         System.out.println("toolTip.getText() = " + toolTip.getText());
